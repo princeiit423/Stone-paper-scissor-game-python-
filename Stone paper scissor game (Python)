@@ -1,0 +1,37 @@
+
+# STONE PAPER SCISSOR GAME PROGRAMME ? -------->
+
+import random
+def gameWin(comp , you):  # FUNCTION FOR GAME WIN CONDITION
+    if comp==you:
+        return print("Match Draw")
+    elif comp=='s':
+        if you=='r':
+           return print("you Loose!")
+        elif you=='p':
+            return print("you win!")
+    elif comp=='p':
+        if you=='s':
+           return print("you Loose!")
+        elif you=='r':
+            return print("you win!")
+    elif comp=='r':
+        if you=='p':
+           return print("you Loose!")
+        elif you=='s':
+            return print("you win!")        
+        
+comp = print("comp_turn : Stone(s) paper(p) or Scissor(r)?")
+RandNo= random.randint(1,3)  # COMPUTER SELECTED RANDOM NUMBER COMMAND.
+if RandNo==1:
+   comp='s'
+elif RandNo==2:
+    comp='p'
+elif RandNo==3:
+    comp='r'    
+
+you= input("Your's turn: Stone(s) paper(p) or Scissor(r): ")    
+
+a = gameWin(comp,you)
+
+#<----------- GAME END ------------->
